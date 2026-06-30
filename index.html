@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Finanzas Dashboard Pro</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+:root{
+--bg:#f5f7fb;
+--card:white;
+--text:#111827;
+--accent:#6366f1;
+--border:#e5e7eb;
+}
+@media (prefers-color-scheme: dark){
+:root{
+--bg:#111827;
+--card:#1f2937;
+--text:#fff;
+--border:#374151;
+}
+}
+body{margin:0;background:var(--bg);font-family:Arial,sans-serif;color:var(--text);display:flex}
+.sidebar{
+width:250px;height:100vh;background:var(--card);
+border-right:1px solid var(--border);
+padding:20px;position:fixed
+}
+.sidebar h2{margin-bottom:25px}
+.menu div{
+padding:12px;border-radius:10px;margin:8px 0;cursor:pointer
+}
+.menu div:hover,.active{
+background:var(--accent);color:white
+}
+.main{
+margin-left:280px;padding:25px;width:100%
+}
+.kpis{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:15px
+}
+.card{
+background:var(--card);
+padding:20px;
+border-radius:16px;
+border:1px solid var(--border)
+}
+.section{display:none}
+.section.active{display:block}
+.insight{
+padding:10px;
+margin:10px 0;
+border-left:4px solid orange;
+background:rgba(255,165,0,.1)
+}
+</style>
+</head>
+<body>
+
+<div class="sidebar">
+<h2><i class="fa-solid fa-wallet"></i> Finanzas</h2>
+
+<div class="menu">
+<div class="active" onclick="show('dashboard',this)">📊 Dashboard</div>
+<div onclick="show('gastos',this)">💳 Gastos</div>
+<div onclick="show('deudas',this)">🏦 Deudas</div>
+<div onclick="show('insights',this)">🧠 Insights</div>
+</div>
+</div>
+
+<div class="main">
+
+<div id="dashboard" class="section active">
+<h1>Resumen financiero</h1>
+
+<div class="kpis">
+<div class="card"><h3>💸 Gastos</h3><h2 id="kpi-gasto">$0</h2></div>
+<div class="card"><h3>🛒 Consumo</h3><h2 id="kpi-consumo">$0</h2></div>
+<div class="card"><h3>💳 Deudas</h3><h2 id="kpi-deuda">$0</h2></div>
+<div class="card"><h3>💰 Disponible</h3><h2 id="kpi-disponible">$0</h2></div>
+</div>
+
+<br>
+
+<div class="card">
+<h3>⚠️ Alertas inteligentes</h3>
+<div id="alerts">
+<div class="insight">Esperando datos...</div>
+</div>
+</div>
+
+</div>
+
+<div id="gastos" class="section">
+<h1>Gastos</h1>
+<div class="card">
+<p>Aquí se conectarán tus gráficos actuales:</p>
+<div id="chart-conceptos"></div>
+<div id="chart-donut"></div>
+</div>
+</div>
+
+<div id="deudas" class="section">
+<h1>Deudas</h1>
+
+<div class="kpis">
+<div class="card"><h3>Nu</h3><h2>$70k</h2></div>
+<div class="card"><h3>BBVA</h3><h2>$200k</h2></div>
+</div>
+
+<div class="card">
+<div id="chart-amortizacion"></div>
+</div>
+
+</div>
+
+<div id="insights" class="section">
+<h1>Hallazgos automáticos</h1>
+
+<div class="insight">📈 Gastaste más en comida este mes</div>
+<div class="insight">⚠️ Amazon aumentó respecto al mes anterior</div>
+<div class="insight">💡 Reduce streaming para ahorrar</div>
+
+</div>
+
+</div>
+
+<script>
+function show(id,el){
+document.querySelectorAll(".section")
+.forEach(x=>x.classList.remove("active"));
+
+document.querySelectorAll(".menu div")
+.forEach(x=>x.classList.remove("active"));
+
+document.getElementById(id).classList.add("active");
+el.classList.add("active");
+}
+</script>
+
+</body>
+</html>
