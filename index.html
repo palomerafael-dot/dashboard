@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="es"><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #131920;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #ffffff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: rgba(0, 0, 0, .12);
+  --color-border-light: rgba(0, 0, 0, .06);
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #ffffff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #F3F3F7;
+  --color-user-bubble-text: #131920;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #ffffff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f5eb;
+  --color-success-border: #b3d9bf;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fceaea;
+  --color-error-border: #f2cccc;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #ffffff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fef7e6;
+  --color-warning-border: #f9dfa3;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #ebf3fc;
+  --color-info-border: #b3d1f0;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #ffffff;
+  --color-overlay: rgba(0, 0, 0, .5);
+  --color-shadow: rgba(0, 0, 0, .08);
+  --color-hover: rgba(0, 0, 0, .05);
+  --color-tooltip-bg: rgba(0, 0, 0, .85);
+  --color-tooltip-text: #ffffff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: rgba(66, 0, 219, .4);
+  --color-voice-red-glow: rgba(219, 0, 0, .4);
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, .05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, .08);
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #F3F3F7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #F3F3F7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333333;
+  --color-graph-node-text-dim: #7F8C8D;
+  --color-graph-edge-default: #95A5A6;
+  --color-graph-edge-cross: #E67E22;
+  --color-graph-edge-text: #666666;
+  --color-graph-edge-stroke: #ffffff;
+  --color-graph-highlight-bg: #FF6B6B;
+  --color-graph-highlight-border: #E74C3C;
+  --color-graph-search-bg: #FFD700;
+  --color-graph-search-border: #FFA500;
+  --color-graph-focus-border: #C0392B;
+  --color-graph-external-border: #95A5A6;
+  --color-graph-cat-file: #3498DB;
+  --color-graph-cat-folder: #7F8C8D;
+  --color-graph-cat-file-aggregate: #2980B9;
+  --color-graph-cat-class: #9B59B6;
+  --color-graph-cat-function: #2ECC71;
+  --color-graph-cat-method: #1ABC9C;
+  --color-graph-cat-variable: #F39C12;
+  --color-graph-cat-import: #D35400;
+  --color-graph-cat-module: #5B6ABF;
+  --color-graph-cat-concept: #E74C3C;
+  --color-graph-cat-person: #FF6B6B;
+  --color-graph-cat-org: #4ECDC4;
+  --color-graph-cat-organization: #4ECDC4;
+  --color-graph-cat-product: #A29BFE;
+  --color-graph-cat-metric: #FD79A8;
+  --color-graph-cat-location: #34495E;
+  --color-graph-cat-date: #E056A0;
+  --color-graph-cat-code: #3498DB;
+  --color-graph-cat-doc: #7F8C8D;
+  --color-graph-cat-url: #00B894;
+  --color-graph-cat-email: #6C5CE7;
+  --color-graph-cat-unknown: #BDC3C7;
+  --color-graph-rel-contains: #BDC3C7;
+  --color-graph-rel-extends: #9B59B6;
+  --color-graph-rel-implements: #3498DB;
+  --color-graph-rel-imports: #E67E22;
+  --color-graph-rel-uses: #2ECC71;
+  --color-graph-rel-calls: #27AE60;
+  --color-graph-rel-references: #F39C12;
+  --color-graph-rel-related-to: #95A5A6;
+  --color-graph-rel-works-on: #E74C3C;
+  --color-graph-rel-owns: #1ABC9C;
+  --color-graph-rel-depends-on: #E67E22;
+  --color-graph-rel-parent-of: #BDC3C7;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: rgba(180, 0, 170, 1);
+  --highlight-selected-bg-color: rgba(0, 100, 0, 1);
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis Gastos - Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/highcharts@12.1.2/highcharts.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/highcharts@12.1.2/modules/accessibility.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #6366f1;
+      --primary-light: #eef2ff;
+      --success: #10b981;
+      --success-light: #ecfdf5;
+      --danger: #ef4444;
+      --danger-light: #fef2f2;
+      --warning: #f59e0b;
+      --warning-light: #fffbeb;
+      --purple: #8b5cf6;
+      --pink: #ec4899;
+      --teal: #14b8a6;
+      --blue: #3b82f6;
+      --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --bg: #f5f7fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --text-secondary: #6b7280;
+      --text-muted: #9ca3af;
+      --border: #e5e7eb;
+      --radius: 16px;
+      --radius-sm: 10px;
+      --shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+      --shadow-md: 0 4px 6px rgba(0,0,0,0.04), 0 2px 4px rgba(0,0,0,0.06);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: var(--bg); font-family: var(--font); color: var(--text); padding: 24px; min-height: 100vh; }
+
+    .header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; flex-wrap: wrap; gap: 12px; }
+    .header-left { display: flex; align-items: center; gap: 12px; }
+    .header-left .avatar { width: 40px; height: 40px; background: linear-gradient(135deg, var(--primary), var(--purple)); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.1rem; }
+    .header h1 { font-size: 1.4rem; font-weight: 700; }
+    .header .subtitle { font-size: 0.78rem; color: var(--text-muted); }
+    .btn-refresh { background: var(--primary); color: white; border: none; padding: 10px 18px; border-radius: var(--radius-sm); font-size: 0.78rem; cursor: pointer; font-weight: 600; display: flex; align-items: center; gap: 6px; box-shadow: var(--shadow); transition: all 0.2s; }
+    .btn-refresh:hover { transform: translateY(-1px); box-shadow: var(--shadow-md); }
+
+    .status-bar { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 10px 16px; margin-bottom: 18px; font-size: 0.75rem; color: var(--text-secondary); display: flex; align-items: center; gap: 8px; box-shadow: var(--shadow); }
+    .dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+    .dot.ok { background: var(--success); box-shadow: 0 0 0 3px rgba(16,185,129,0.2); }
+    .dot.loading { background: var(--warning); animation: pulse 1.5s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(0.8)} }
+
+    .filters { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 22px; }
+    .filter-box { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 12px 16px; box-shadow: var(--shadow); }
+    .filter-box label { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted); display: block; margin-bottom: 8px; letter-spacing: 0.8px; }
+    .filter-pills { display: flex; flex-wrap: wrap; gap: 5px; }
+    .pill { padding: 5px 12px; border-radius: 6px; font-size: 0.72rem; font-weight: 500; cursor: pointer; background: var(--bg); color: var(--text-secondary); border: 1px solid var(--border); transition: all 0.15s; }
+    .pill.active { background: var(--primary); color: white; border-color: var(--primary); box-shadow: 0 2px 4px rgba(99,102,241,0.3); }
+    .pill:hover:not(.active) { background: var(--primary-light); color: var(--primary); border-color: var(--primary); }
+
+    .kpi-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin-bottom: 22px; }
+    .kpi-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; position: relative; overflow: hidden; box-shadow: var(--shadow); transition: all 0.2s; }
+    .kpi-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+    .kpi-card .kpi-accent { position: absolute; top: 0; left: 0; width: 4px; height: 100%; border-radius: 0 4px 4px 0; }
+    .kpi-card .kpi-icon { width: 36px; height: 36px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; margin-bottom: 12px; }
+    .kpi-card .kpi-label { font-size: 0.7rem; font-weight: 600; text-transform: uppercase; color: var(--text-muted); margin-bottom: 6px; letter-spacing: 0.3px; }
+    .kpi-card .kpi-value { font-size: 1.4rem; font-weight: 800; color: var(--text); }
+    .kpi-card .kpi-sub { font-size: 0.68rem; color: var(--text-muted); margin-top: 6px; }
+    .kpi-card .kpi-compare { font-size: 0.7rem; margin-top: 8px; font-weight: 600; display: inline-flex; align-items: center; gap: 4px; padding: 3px 8px; border-radius: 20px; }
+    .kpi-card .kpi-compare.up { color: var(--danger); background: var(--danger-light); }
+    .kpi-card .kpi-compare.down { color: var(--success); background: var(--success-light); }
+
+    .grid-main { display: grid; grid-template-columns: 2fr 1fr; gap: 16px; margin-bottom: 16px; }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; box-shadow: var(--shadow); }
+    .card h3 { font-size: 0.85rem; font-weight: 700; margin-bottom: 16px; color: var(--text); display: flex; align-items: center; gap: 8px; }
+    .card h3 .icon-badge { width: 28px; height: 28px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; flex-shrink: 0; }
+    .card .card-note { font-size: 0.68rem; color: var(--text-muted); margin-top: -10px; margin-bottom: 14px; font-style: italic; }
+
+    .top-list { list-style: none; }
+    .top-list li { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid #f3f4f6; font-size: 0.78rem; }
+    .top-list li:last-child { border-bottom: none; }
+    .top-list .rank { width: 22px; height: 22px; border-radius: 6px; display: inline-flex; align-items: center; justify-content: center; font-size: 0.65rem; font-weight: 700; margin-right: 10px; color: white; flex-shrink: 0; }
+    .top-list .lugar-name { color: var(--text); font-weight: 500; flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .top-list .lugar-monto { color: var(--text); font-weight: 700; margin-left: 8px; white-space: nowrap; }
+
+    .legend-note { display: flex; align-items: center; gap: 6px; font-size: 0.68rem; color: var(--text-muted); margin-top: 12px; padding: 8px 12px; background: #f9fafb; border-radius: 8px; }
+    .legend-note i { color: var(--primary); }
+
+    @media (max-width: 900px) { .grid-main { grid-template-columns: 1fr; } }
+    @media (max-width: 768px) {
+      body { padding: 14px; }
+      .filters { flex-direction: column; }
+      .kpi-row { grid-template-columns: repeat(2, 1fr); }
+      .grid-2 { grid-template-columns: 1fr; }
+      .kpi-card .kpi-value { font-size: 1.1rem; }
+      .header h1 { font-size: 1.2rem; }
+    }
+    @media (max-width: 480px) { .kpi-row { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="header-left">
+      <div class="avatar"><i class="fas fa-wallet"></i></div>
+      <div>
+        <h1>Mis Gastos</h1>
+        <div class="subtitle">A donde se va mi dinero, cuando, donde y cuanto</div>
+      </div>
+    </div>
+    <button class="btn-refresh" onclick="loadFromSheet()"><i class="fas fa-sync-alt"></i> Actualizar</button>
+  </div>
+
+  <div class="status-bar">
+    <span class="dot loading" id="status-dot"></span>
+    <span id="status-text">Cargando...</span>
+  </div>
+
+  <div class="filters">
+    <div class="filter-box"><label><i class="fas fa-calendar" style="margin-right:4px"></i>Ano</label><div class="filter-pills" id="filter-ano"></div></div>
+    <div class="filter-box"><label><i class="fas fa-calendar-day" style="margin-right:4px"></i>Mes</label><div class="filter-pills" id="filter-mes"></div></div>
+    <div class="filter-box"><label><i class="fas fa-credit-card" style="margin-right:4px"></i>Cuenta</label><div class="filter-pills" id="filter-cuenta"></div></div>
+  </div>
+
+  <div id="content" style="display:none;">
+    <div class="kpi-row" id="kpi-container"></div>
+
+    <div class="grid-main">
+      <div class="card">
+        <h3><span class="icon-badge" style="background:var(--primary-light);color:var(--primary)"><i class="fas fa-chart-bar"></i></span>A donde se va tu dinero (Top 10)</h3>
+        <p class="card-note"><i class="fas fa-info-circle"></i> Solo gastos reales — no incluye pagos de deuda ni transferencias</p>
+        <div id="chart-conceptos" style="height: 340px;"></div>
+      </div>
+      <div class="card">
+        <h3><span class="icon-badge" style="background:#faf5ff;color:var(--purple)"><i class="fas fa-store"></i></span>Donde gastas mas</h3>
+        <p class="card-note"><i class="fas fa-info-circle"></i> Solo comercios de gasto real</p>
+        <ul class="top-list" id="top-lugares"></ul>
+      </div>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <h3><span class="icon-badge" style="background:var(--success-light);color:var(--success)"><i class="fas fa-chart-line"></i></span>Cuanto gastas por mes</h3>
+        <div id="chart-tendencia" style="height: 280px;"></div>
+        <div class="legend-note"><i class="fas fa-lightbulb"></i> Incluye todo tipo de gasto (consumo + deuda)</div>
+      </div>
+      <div class="card">
+        <h3><span class="icon-badge" style="background:var(--warning-light);color:var(--warning)"><i class="fas fa-chart-pie"></i></span>Distribucion del gasto</h3>
+        <div id="chart-donut" style="height: 280px;"></div>
+      </div>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <h3><span class="icon-badge" style="background:#fdf2f8;color:var(--pink)"><i class="fas fa-credit-card"></i></span>Gasto por tarjeta / cuenta</h3>
+        <div id="chart-cuentas" style="height: 280px;"></div>
+      </div>
+      <div class="card">
+        <h3><span class="icon-badge" style="background:#f0fdfa;color:var(--teal)"><i class="fas fa-balance-scale"></i></span>Consumo real vs Pagos de deuda</h3>
+        <p class="card-note"><i class="fas fa-info-circle"></i> Cuanto es gasto real y cuanto es pagar lo que ya debias</p>
+        <div id="chart-desglose" style="height: 250px;"></div>
+      </div>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <h3><span class="icon-badge" style="background:var(--danger-light);color:var(--danger)"><i class="fas fa-fire"></i></span>Comparativa ultimos meses</h3>
+        <div id="chart-comparativa" style="height: 280px;"></div>
+      </div>
+      <div class="card">
+        <h3><span class="icon-badge" style="background:var(--primary-light);color:var(--primary)"><i class="fas fa-calendar-week"></i></span>Gasto por semana</h3>
+        <p class="card-note"><i class="fas fa-info-circle"></i> Dentro del periodo filtrado</p>
+        <div id="chart-semanal" style="height: 250px;"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // =====================================================
+    // TU ENLACE DE GOOGLE SHEETS
+    // =====================================================
+    var SHEET_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRR1i5P_D2n8yZ9qKTrLCU2qEBVk5pkxt7IGDfXh0lrwOCxtf9Ih3QZyWSg5pR0ee5ozm7kZnBRUc-j/pub?gid=0&single=true&output=csv';
+
+    // COLUMNAS
+    var COL_MONTO = 'Monto';
+    var COL_TIPO = 'Tipo';
+    var COL_LUGAR = 'Lugar_Comercio';
+    var COL_CONCEPTO = 'Concepto';
+    var COL_ANO = 'Ano';
+    var COL_MES = 'Mes';
+    var COL_SEMANA = 'Semana';
+    var COL_CUENTA = 'Cuenta';
+
+    // Conceptos que son PAGOS DE DEUDA (no gasto real de consumo)
+    var CONCEPTOS_DEUDA = ['pago de credito', 'transferencia', 'pago tarjeta', 'retiro de efectivo', 'fondo de ahorro'];
+
+    var MESES_ORDEN = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+    var COLORS = ['#6366f1','#14b8a6','#ec4899','#f59e0b','#3b82f6','#8b5cf6','#ef4444','#10b981','#06b6d4','#f97316'];
+
+    var FALLBACK_DATA = [
+      {monto:100,tipo:'Gasto',lugar:'BMOV (Recarga)',concepto:'Recarga Telefonica',ano:'2024',mes:'diciembre',semana:'WK 01',cuenta:'Libreton Premium'},
+      {monto:500,tipo:'Gasto',lugar:'BBVA (Cuenta Tercero)',concepto:'Transferencia',ano:'2024',mes:'diciembre',semana:'WK 01',cuenta:'Libreton Premium'},
+      {monto:628.62,tipo:'Gasto',lugar:'MERCADO PAGO',concepto:'Pago de Credito',ano:'2024',mes:'diciembre',semana:'WK 01',cuenta:'Tarjeta Azul BBVA'},
+      {monto:149,tipo:'Gasto',lugar:'Amazon Mx',concepto:'Compras en linea',ano:'2024',mes:'diciembre',semana:'WK 01',cuenta:'Nu'},
+      {monto:69.9,tipo:'Gasto',lugar:'Steam',concepto:'Entretenimiento',ano:'2024',mes:'diciembre',semana:'WK 01',cuenta:'Nu'},
+      {monto:11000,tipo:'Gasto',lugar:'Nu Mexico (RafaelSTP)',concepto:'Pago de Credito',ano:'2024',mes:'diciembre',semana:'WK 50',cuenta:'Libreton Premium'},
+      {monto:1056.8,tipo:'Gasto',lugar:'BBVA (Pago TDC)',concepto:'Pago de Credito',ano:'2024',mes:'diciembre',semana:'WK 50',cuenta:'Libreton Premium'},
+      {monto:368,tipo:'Gasto',lugar:'NETFLIX',concepto:'Streaming',ano:'2024',mes:'diciembre',semana:'WK 50',cuenta:'Tarjeta Azul BBVA'},
+      {monto:39.83,tipo:'Gasto',lugar:'Amazon Mx',concepto:'Compras en linea',ano:'2024',mes:'diciembre',semana:'WK 50',cuenta:'Nu'},
+      {monto:2543.34,tipo:'Ingreso',lugar:'HSBC (Amazon Mexico)',concepto:'Nomina',ano:'2024',mes:'diciembre',semana:'WK 50',cuenta:'Libreton Premium'},
+      {monto:3130.43,tipo:'Gasto',lugar:'BBVA (Pago TDC)',concepto:'Pago de Credito',ano:'2025',mes:'enero',semana:'WK 02',cuenta:'Libreton Premium'},
+      {monto:95,tipo:'Gasto',lugar:'APPLE.COM/BILL',concepto:'Nube',ano:'2025',mes:'enero',semana:'WK 02',cuenta:'Tarjeta Azul BBVA'},
+      {monto:349,tipo:'Gasto',lugar:'Sanborns',concepto:'Compras',ano:'2025',mes:'enero',semana:'WK 02',cuenta:'Nu'},
+      {monto:450,tipo:'Gasto',lugar:'Uber Eats',concepto:'Comida En Linea',ano:'2025',mes:'enero',semana:'WK 03',cuenta:'Nu'},
+      {monto:5500,tipo:'Gasto',lugar:'Casero',concepto:'Renta',ano:'2025',mes:'febrero',semana:'WK 06',cuenta:'Libreton Premium'},
+      {monto:890,tipo:'Gasto',lugar:'Soriana',concepto:'Despensa',ano:'2025',mes:'febrero',semana:'WK 07',cuenta:'Libreton Premium'},
+      {monto:2600,tipo:'Ingreso',lugar:'HSBC (Amazon Mexico)',concepto:'Nomina',ano:'2025',mes:'febrero',semana:'WK 06',cuenta:'Libreton Premium'},
+      {monto:320,tipo:'Gasto',lugar:'Amazon Mx',concepto:'Compras en linea',ano:'2026',mes:'junio',semana:'WK 25',cuenta:'Nu'},
+      {monto:1100,tipo:'Gasto',lugar:'BBVA (Pago TDC)',concepto:'Pago de Credito',ano:'2026',mes:'junio',semana:'WK 26',cuenta:'Tarjeta Azul BBVA'},
+      {monto:750,tipo:'Gasto',lugar:'Mercado Pago',concepto:'Pago de Credito',ano:'2026',mes:'junio',semana:'WK 27',cuenta:'Nu'},
+      {monto:200,tipo:'Gasto',lugar:'Spotify',concepto:'Streaming',ano:'2026',mes:'junio',semana:'WK 27',cuenta:'Nu'},
+    ];
+
+    var allRows = [];
+    var activeFilters = { ano: null, mes: null, cuenta: null };
+
+    function parseCSV(text) {
+      var lines = text.trim().split('\n');
+      var headers = lines[0].split(',').map(function(h){ return h.trim().replace(/"/g,'').replace(/^\uFEFF/,''); });
+      var result = [];
+      for (var i = 1; i < lines.length; i++) {
+        if (!lines[i].trim()) continue;
+        var values = []; var current = ''; var inQ = false;
+        for (var j = 0; j < lines[i].length; j++) {
+          var ch = lines[i][j];
+          if (ch === '"') inQ = !inQ;
+          else if (ch === ',' && !inQ) { values.push(current.trim()); current = ''; }
+          else current += ch;
+        }
+        values.push(current.trim());
+        var obj = {};
+        for (var k = 0; k < headers.length; k++) obj[headers[k]] = values[k] || '';
+        result.push(obj);
+      }
+      return result;
+    }
+
+    function getVal(row, col) {
+      var keys = Object.keys(row);
+      var norm = function(s){ return s.toLowerCase().replace(/[áàä]/g,'a').replace(/[éèë]/g,'e').replace(/[íìï]/g,'i').replace(/[óòö]/g,'o').replace(/[úùü]/g,'u').replace(/ñ/g,'n').replace(/[^a-z0-9]/g,''); };
+      var target = norm(col);
+      for (var i = 0; i < keys.length; i++) { if (norm(keys[i]) === target) return (row[keys[i]]||'').trim(); }
+      return '';
+    }
+
+    function getNum(row) {
+      var val = getVal(row, COL_MONTO);
+      val = val.replace('%','').replace('$','').replace(/,/g,'');
+      return parseFloat(val) || 0;
+    }
+
+    function formatMoney(n) {
+      if (n >= 1000000) return '$' + (n/1000000).toFixed(1) + 'M';
+      if (n >= 100000) return '$' + (n/1000).toFixed(0) + 'k';
+      return '$' + n.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    }
+
+    function formatMoneyFull(n) { return '$' + n.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ','); }
+
+    function getMesIndex(mes) {
+      var m = (mes||'').toLowerCase();
+      var idx = MESES_ORDEN.indexOf(m);
+      return idx >= 0 ? idx : 99;
+    }
+
+    function isGastoReal(row) {
+      // Solo tipo Gasto (excluye Ingreso, Ingreso (Pago), Ingreso (Reembolso))
+      return row.tipo.toLowerCase().indexOf('gasto') !== -1;
+    }
+
+    function isConsumoReal(row) {
+      // Gasto real = tipo gasto Y no es pago de deuda/transferencia
+      if (!isGastoReal(row)) return false;
+      var c = row.concepto.toLowerCase();
+      for (var i = 0; i < CONCEPTOS_DEUDA.length; i++) {
+        if (c.indexOf(CONCEPTOS_DEUDA[i]) !== -1) return false;
+      }
+      return true;
+    }
+
+    function isDeuda(row) {
+      if (!isGastoReal(row)) return false;
+      var c = row.concepto.toLowerCase();
+      for (var i = 0; i < CONCEPTOS_DEUDA.length; i++) {
+        if (c.indexOf(CONCEPTOS_DEUDA[i]) !== -1) return true;
+      }
+      return false;
+    }
+
+    function buildFilters() {
+      var anos = {}, meses = {}, cuentas = {};
+      for (var i = 0; i < allRows.length; i++) {
+        if (allRows[i].ano) anos[allRows[i].ano] = true;
+        if (allRows[i].mes) meses[allRows[i].mes] = true;
+        if (allRows[i].cuenta) cuentas[allRows[i].cuenta] = true;
+      }
+      renderPills('filter-ano', ['Todos'].concat(Object.keys(anos).sort()), 'ano');
+      renderPills('filter-mes', ['Todos'].concat(Object.keys(meses).sort(function(a,b){ return getMesIndex(a) - getMesIndex(b); })), 'mes');
+      renderPills('filter-cuenta', ['Todas'].concat(Object.keys(cuentas).sort()), 'cuenta');
+    }
+
+    function renderPills(id, items, key) {
+      var container = document.getElementById(id);
+      if (!container) return;
+      container.innerHTML = '';
+      for (var i = 0; i < items.length; i++) {
+        var isActive = (i === 0);
+        var pill = document.createElement('span');
+        pill.className = 'pill' + (isActive ? ' active' : '');
+        pill.textContent = items[i];
+        pill.setAttribute('data-key', key);
+        pill.setAttribute('data-value', items[i]);
+        pill.onclick = function() {
+          var siblings = this.parentNode.querySelectorAll('.pill');
+          for (var j = 0; j < siblings.length; j++) siblings[j].classList.remove('active');
+          this.classList.add('active');
+          var v = this.getAttribute('data-value');
+          activeFilters[this.getAttribute('data-key')] = (v === 'Todos' || v === 'Todas') ? null : v;
+          applyFilters();
+        };
+        container.appendChild(pill);
+        if (isActive) activeFilters[key] = (items[i] === 'Todos' || items[i] === 'Todas') ? null : items[i];
+      }
+    }
+
+    function getGastos() {
+      var filtered = [];
+      for (var i = 0; i < allRows.length; i++) {
+        var r = allRows[i];
+        if (!isGastoReal(r)) continue;
+        if (activeFilters.ano && r.ano !== activeFilters.ano) continue;
+        if (activeFilters.mes && r.mes.toLowerCase() !== activeFilters.mes.toLowerCase()) continue;
+        if (activeFilters.cuenta && r.cuenta !== activeFilters.cuenta) continue;
+        filtered.push(r);
+      }
+      return filtered;
+    }
+
+    function applyFilters() {
+      var gastos = getGastos();
+      renderKPIs(gastos);
+      renderConceptos(gastos);
+      renderTopLugares(gastos);
+      renderDonut(gastos);
+      renderDesglose(gastos);
+      renderTendencia();
+      renderCuentas(gastos);
+      renderComparativa();
+      renderSemanal(gastos);
+    }
+
+    function renderKPIs(gastos) {
+      var container = document.getElementById('kpi-container');
+      if (!container) return;
+      container.innerHTML = '';
+
+      var totalGasto = 0, totalConsumo = 0, totalDeuda = 0, countConsumo = 0;
+      for (var i = 0; i < gastos.length; i++) {
+        totalGasto += gastos[i].monto;
+        if (isConsumoReal(gastos[i])) { totalConsumo += gastos[i].monto; countConsumo++; }
+        else { totalDeuda += gastos[i].monto; }
+      }
+
+      // Comparativa mes anterior
+      var compareHTML = '';
+      if (activeFilters.mes && activeFilters.ano) {
+        var mesIdx = getMesIndex(activeFilters.mes);
+        var prevMes = mesIdx > 0 ? MESES_ORDEN[mesIdx - 1] : MESES_ORDEN[11];
+        var prevAno = mesIdx > 0 ? activeFilters.ano : (parseInt(activeFilters.ano) - 1).toString();
+        var prevTotal = 0;
+        for (var i = 0; i < allRows.length; i++) {
+          var r = allRows[i];
+          if (!isGastoReal(r)) continue;
+          if (r.ano === prevAno && r.mes.toLowerCase() === prevMes) {
+            if (activeFilters.cuenta && r.cuenta !== activeFilters.cuenta) continue;
+            prevTotal += r.monto;
+          }
+        }
+        if (prevTotal > 0) {
+          var diff = totalGasto - prevTotal;
+          var pct = ((diff / prevTotal) * 100).toFixed(0);
+          var cls = diff > 0 ? 'up' : 'down';
+          var arrow = diff > 0 ? '<i class="fas fa-arrow-up"></i>' : '<i class="fas fa-arrow-down"></i>';
+          compareHTML = '<div class="kpi-compare ' + cls + '">' + arrow + ' ' + Math.abs(pct) + '% vs ' + prevMes + '</div>';
+        }
+      }
+
+      // KPI 1: Total salidas
+      var c1 = document.createElement('div'); c1.className = 'kpi-card';
+      c1.innerHTML = '<div class="kpi-accent" style="background:var(--danger)"></div><div class="kpi-icon" style="background:var(--danger-light);color:var(--danger)"><i class="fas fa-arrow-down"></i></div><div class="kpi-label">Total salidas</div><div class="kpi-value">' + formatMoneyFull(totalGasto) + '</div><div class="kpi-sub">' + gastos.length + ' movimientos</div>' + compareHTML;
+      container.appendChild(c1);
+
+      // KPI 2: Consumo real
+      var c2 = document.createElement('div'); c2.className = 'kpi-card';
+      c2.innerHTML = '<div class="kpi-accent" style="background:var(--primary)"></div><div class="kpi-icon" style="background:var(--primary-light);color:var(--primary)"><i class="fas fa-shopping-cart"></i></div><div class="kpi-label">Consumo real</div><div class="kpi-value">' + formatMoneyFull(totalConsumo) + '</div><div class="kpi-sub">' + countConsumo + ' compras (lo que realmente gastas)</div>';
+      container.appendChild(c2);
+
+      // KPI 3: Pagos de deuda
+      var c3 = document.createElement('div'); c3.className = 'kpi-card';
+      c3.innerHTML = '<div class="kpi-accent" style="background:var(--warning)"></div><div class="kpi-icon" style="background:var(--warning-light);color:var(--warning)"><i class="fas fa-university"></i></div><div class="kpi-label">Pagos de deuda</div><div class="kpi-value">' + formatMoneyFull(totalDeuda) + '</div><div class="kpi-sub">Creditos, transferencias, retiros</div>';
+      container.appendChild(c3);
+
+      // KPI 4: Promedio por compra
+      var avg = countConsumo > 0 ? totalConsumo / countConsumo : 0;
+      var c4 = document.createElement('div'); c4.className = 'kpi-card';
+      c4.innerHTML = '<div class="kpi-accent" style="background:var(--teal)"></div><div class="kpi-icon" style="background:#f0fdfa;color:var(--teal)"><i class="fas fa-receipt"></i></div><div class="kpi-label">Promedio por compra</div><div class="kpi-value">' + formatMoneyFull(avg) + '</div><div class="kpi-sub">Solo consumo real</div>';
+      container.appendChild(c4);
+
+      // KPI 5: Top concepto de consumo
+      var conceptos = {};
+      for (var i = 0; i < gastos.length; i++) {
+        if (!isConsumoReal(gastos[i])) continue;
+        var c = gastos[i].concepto;
+        if (!conceptos[c]) conceptos[c] = 0;
+        conceptos[c] += gastos[i].monto;
+      }
+      var sorted = Object.keys(conceptos).sort(function(a,b){ return conceptos[b] - conceptos[a]; });
+      if (sorted.length > 0) {
+        var c5 = document.createElement('div'); c5.className = 'kpi-card';
+        c5.innerHTML = '<div class="kpi-accent" style="background:var(--pink)"></div><div class="kpi-icon" style="background:#fdf2f8;color:var(--pink)"><i class="fas fa-fire"></i></div><div class="kpi-label">Mayor gasto en</div><div class="kpi-value">' + sorted[0] + '</div><div class="kpi-sub">' + formatMoneyFull(conceptos[sorted[0]]) + '</div>';
+        container.appendChild(c5);
+      }
+    }
+
+    function renderConceptos(gastos) {
+      // Solo consumo real (excluye pagos de deuda)
+      var groups = {};
+      for (var i = 0; i < gastos.length; i++) {
+        if (!isConsumoReal(gastos[i])) continue;
+        var c = gastos[i].concepto;
+        if (!groups[c]) groups[c] = 0;
+        groups[c] += gastos[i].monto;
+      }
+      var sorted = Object.keys(groups).sort(function(a,b){ return groups[b] - groups[a]; });
+      var cats = sorted.slice(0, 10);
+      var vals = cats.map(function(c){ return parseFloat(groups[c].toFixed(2)); });
+
+      if (typeof Highcharts !== 'undefined') {
+        Highcharts.chart('chart-conceptos', {
+          chart: { type: 'bar', backgroundColor: 'transparent', spacing: [10,10,10,10] },
+          title: { text: null },
+          xAxis: { categories: cats, labels: { style: { color: '#6b7280', fontSize: '0.73rem' } }, lineWidth: 0 },
+          yAxis: { title: { text: null }, labels: { style: { color: '#9ca3af' }, formatter: function(){ return '$' + (this.value/1000).toFixed(0) + 'k'; } }, gridLineColor: '#f3f4f6', gridLineDashStyle: 'Dash' },
+          tooltip: { formatter: function(){ return '<b>' + this.point.category + '</b><br>' + formatMoneyFull(this.y); }, backgroundColor: '#1f2937', borderWidth: 0, style: { color: '#fff' }, borderRadius: 8 },
+          plotOptions: { bar: { borderRadius: 5, pointWidth: 22, dataLabels: { enabled: true, formatter: function(){ return formatMoney(this.y); }, style: { fontSize: '0.7rem', textOutline: 'none', color: '#6b7280', fontWeight: '600' } } } },
+          series: [{ name: 'Monto', data: vals, colorByPoint: true, colors: COLORS, showInLegend: false }],
+          credits: { enabled: false }
+        });
+      }
+    }
+
+    function renderTopLugares(gastos) {
+      var container = document.getElementById('top-lugares');
+      if (!container) return;
+      // Solo consumo real
+      var groups = {};
+      for (var i = 0; i < gastos.length; i++) {
+        if (!isConsumoReal(gastos[i])) continue;
+        var l = gastos[i].lugar;
+        if (!groups[l]) groups[l] = 0;
+        groups[l] += gastos[i].monto;
+      }
+      var sorted = Object.keys(groups).sort(function(a,b){ return groups[b] - groups[a]; });
+      var rankColors = ['#6366f1','#8b5cf6','#a78bfa','#c4b5fd','#ddd6fe','#e0e7ff','#e5e7eb','#e5e7eb','#f3f4f6','#f3f4f6'];
+      var html = '';
+      for (var i = 0; i < Math.min(10, sorted.length); i++) {
+        html += '<li><span class="rank" style="background:' + rankColors[Math.min(i, rankColors.length-1)] + '">' + (i+1) + '</span><span class="lugar-name">' + sorted[i] + '</span><span class="lugar-monto">' + formatMoney(groups[sorted[i]]) + '</span></li>';
+      }
+      container.innerHTML = html;
+    }
+
+    function renderDonut(gastos) {
+      // Solo consumo real
+      var groups = {};
+      for (var i = 0; i < gastos.length; i++) {
+        if (!isConsumoReal(gastos[i])) continue;
+        var c = gastos[i].concepto;
+        if (!groups[c]) groups[c] = 0;
+        groups[c] += gastos[i].monto;
+      }
+      var sorted = Object.keys(groups).sort(function(a,b){ return groups[b] - groups[a]; });
+      var data = [];
+      for (var i = 0; i < Math.min(7, sorted.length); i++) {
+        data.push({ name: sorted[i], y: parseFloat(groups[sorted[i]].toFixed(2)), color: COLORS[i % COLORS.length] });
+      }
+      if (sorted.length > 7) {
+        var otros = 0;
+        for (var i = 7; i < sorted.length; i++) otros += groups[sorted[i]];
+        data.push({ name: 'Otros', y: parseFloat(otros.toFixed(2)), color: '#d1d5db' });
+      }
+      if (typeof Highcharts !== 'undefined') {
+        Highcharts.chart('chart-donut', {
+          chart: { type: 'pie', backgroundColor: 'transparent' },
+          title: { text: null },
+          tooltip: { formatter: function(){ return '<b>' + this.point.name + '</b><br>' + formatMoneyFull(this.y) + ' (' + this.percentage.toFixed(1) + '%)'; }, backgroundColor: '#1f2937', borderWidth: 0, style: { color: '#fff' }, borderRadius: 8 },
+          plotOptions: { pie: { innerSize: '60%', borderWidth: 3, borderColor: '#fff', dataLabels: { enabled: true, format: '{point.name}<br><b>{point.percentage:.0f}%</b>', style: { fontSize: '0.68rem', textOutline: 'none', color: '#6b7280' }, distance: 12 } } },
+          series: [{ data: data }],
+          credits: { enabled: false }
+        });
+      }
+    }
+
+    function renderDesglose(gastos) {
+      var consumo = 0, deuda = 0;
+      for (var i = 0; i < gastos.length; i++) {
+        if (isConsumoReal(gastos[i])) consumo += gastos[i].monto;
+        else deuda += gastos[i].monto;
+      }
+      if (typeof Highcharts !== 'undefined') {
+        Highcharts.chart('chart-desglose', {
+          chart: { type: 'pie', backgroundColor: 'transparent' },
+          title: { text: null },
+          tooltip: { formatter: function(){ return '<b>' + this.point.name + '</b><br>' + formatMoneyFull(this.y) + ' (' + this.percentage.toFixed(1) + '%)'; }, backgroundColor: '#1f2937', borderWidth: 0, style: { color: '#fff' }, borderRadius: 8 },
+          plotOptions: { pie: { innerSize: '50%', borderWidth: 3, borderColor: '#fff', dataLabels: { enabled: true, format: '<b>{point.name}</b><br>{point.percentage:.0f}%', style: { fontSize: '0.75rem', textOutline: 'none' }, distance: 15 } } },
+          series: [{ data: [
+            { name: 'Consumo real', y: parseFloat(consumo.toFixed(2)), color: '#6366f1' },
+            { name: 'Pagos deuda', y: parseFloat(deuda.toFixed(2)), color: '#f59e0b' }
+          ]}],
+          credits: { enabled: false }
+        });
+      }
+    }
+
+    function renderCuentas(gastos) {
+      var groups = {};
+      for (var i = 0; i < gastos.length; i++) {
+        var c = gastos[i].cuenta;
+        if (!c) continue;
+        if (!groups[c]) groups[c] = 0;
+        groups[c] += gastos[i].monto;
+      }
+      var sorted = Object.keys(groups).sort(function(a,b){ return groups[b] - groups[a]; });
+      var vals = sorted.map(function(c){ return parseFloat(groups[c].toFixed(2)); });
+      var cColors = ['#ec4899','#6366f1','#f59e0b','#14b8a6','#8b5cf6','#3b82f6','#ef4444'];
+
+      if (typeof Highcharts !== 'undefined') {
+        Highcharts.chart('chart-cuentas', {
+          chart: { type: 'column', backgroundColor: 'transparent' },
+          title: { text: null },
+          xAxis: { categories: sorted, labels: { style: { color: '#6b7280', fontSize: '0.72rem' } }, lineWidth: 0 },
+          yAxis: { title: { text: null }, labels: { style: { color: '#9ca3af' }, formatter: function(){ return '$' + (this.value/1000).toFixed(0) + 'k'; } }, gridLineColor: '#f3f4f6', gridLineDashStyle: 'Dash' },
+          tooltip: { formatter: function(){ return '<b>' + this.point.category + '</b><br>' + formatMoneyFull(this.y); }, backgroundColor: '#1f2937', borderWidth: 0, style: { color: '#fff' }, borderRadius: 8 },
+          plotOptions: { column: { borderRadius: 8, dataLabels: { enabled: true, formatter: function(){ return formatMoney(this.y); }, style: { fontSize: '0.7rem', textOutline: 'none', color: '#6b7280', fontWeight: '600' } } } },
+          series: [{ name: 'Monto', data: vals, colorByPoint: true, colors: cColors, showInLegend: false }],
+          credits: { enabled: false }
+        });
+      }
+    }
+
+    function renderComparativa() {
+      var cuentaFilter = activeFilters.cuenta;
+      var monthsMap = {};
+      for (var i = 0; i < allRows.length; i++) {
+        var r = allRows[i];
+        if (!isGastoReal(r)) continue;
+        if (cuentaFilter && r.cuenta !== cuentaFilter) continue;
+        var mesIdx = getMesIndex(r.mes);
+        var key = r.ano + '-' + String(mesIdx + 1).padStart(2, '0');
+        if (!monthsMap[key]) monthsMap[key] = { total: 0, label: r.mes.substring(0,3) + ' ' + r.ano.substring(2) };
+        monthsMap[key].total += r.monto;
+      }
+      var allKeys = Object.keys(monthsMap).sort();
+      var last6 = allKeys.slice(-6);
+      var cats = last6.map(function(k){ return monthsMap[k].label; });
+      var vals = last6.map(function(k){ return parseFloat(monthsMap[k].total.toFixed(2)); });
+
+      if (typeof Highcharts !== 'undefined') {
+        Highcharts.chart('chart-comparativa', {
+          chart: { type: 'column', backgroundColor: 'transparent' },
+          title: { text: null },
+          xAxis: { categories: cats, labels: { style: { color: '#6b7280', fontSize: '0.75rem' } }, lineWidth: 0 },
+          yAxis: { title: { text: null }, labels: { style: { color: '#9ca3af' }, formatter: function(){ return '$' + (this.value/1000).toFixed(0) + 'k'; } }, gridLineColor: '#f3f4f6', gridLineDashStyle: 'Dash' },
+          tooltip: { formatter: function(){ return '<b>' + this.x + '</b><br>' + formatMoneyFull(this.y); }, backgroundColor: '#1f2937', borderWidth: 0, style: { color: '#fff' }, borderRadius: 8 },
+          plotOptions: { column: { borderRadius: 8, color: '#ef4444', dataLabels: { enabled: true, formatter: function(){ return formatMoney(this.y); }, style: { fontSize: '0.7rem', textOutline: 'none', color: '#6b7280', fontWeight: '600' } } } },
+          series: [{ name: 'Gasto total', data: vals, showInLegend: false }],
+          credits: { enabled: false }
+        });
+      }
+    }
+
+    function renderTendencia() {
+      var cuentaFilter = activeFilters.cuenta;
+      var mapConsumo = {}, mapDeuda = {};
+      for (var i = 0; i < allRows.length; i++) {
+        var r = allRows[i];
+        if (!isGastoReal(r)) continue;
+        if (cuentaFilter && r.cuenta !== cuentaFilter) continue;
+        var mesIdx = getMesIndex(r.mes);
+        var key = r.ano + '-' + String(mesIdx + 1).padStart(2, '0');
+        var label = r.mes.substring(0,3) + ' ' + r.ano;
+        if (isConsumoReal(r)) {
+          if (!mapConsumo[key]) mapConsumo[key] = { total: 0, label: label };
+          mapConsumo[key].total += r.monto;
+        } else {
+          if (!mapDeuda[key]) mapDeuda[key] = { total: 0, label: label };
+          mapDeuda[key].total += r.monto;
+        }
+      }
+      var allKeysSet = {};
+      Object.keys(mapConsumo).forEach(function(k){ allKeysSet[k] = true; });
+      Object.keys(mapDeuda).forEach(function(k){ allKeysSet[k] = true; });
+      var keys = Object.keys(allKeysSet).sort();
+      var cats = keys.map(function(k){ return (mapConsumo[k] || mapDeuda[k]).label; });
+      var valsC = keys.map(function(k){ return mapConsumo[k] ? parseFloat(mapConsumo[k].total.toFixed(2)) : 0; });
+      var valsD = keys.map(function(k){ return mapDeuda[k] ? parseFloat(mapDeuda[k].total.toFixed(2)) : 0; });
+
+      if (typeof Highcharts !== 'undefined') {
+        Highcharts.chart('chart-tendencia', {
+          chart: { type: 'areaspline', backgroundColor: 'transparent' },
+          title: { text: null },
+          xAxis: { categories: cats, labels: { style: { color: '#6b7280', fontSize: '0.7rem' }, rotation: -45 }, lineWidth: 0 },
+          yAxis: { title: { text: null }, labels: { style: { color: '#9ca3af' }, formatter: function(){ return '$' + (this.value/1000).toFixed(0) + 'k'; } }, gridLineColor: '#f3f4f6', gridLineDashStyle: 'Dash' },
+          tooltip: { shared: true, formatter: function(){ var s = '<b>' + this.x + '</b>'; for(var i=0;i<this.points.length;i++) s += '<br><span style="color:'+this.points[i].color+'">\u25CF</span> ' + this.points[i].series.name + ': ' + formatMoneyFull(this.points[i].y); return s; }, backgroundColor: '#1f2937', borderWidth: 0, style: { color: '#fff' }, borderRadius: 8 },
+          plotOptions: { areaspline: { fillOpacity: 0.08, marker: { radius: 3 }, lineWidth: 2.5, stacking: 'normal' } },
+          series: [
+            { name: 'Consumo real', data: valsC, color: '#6366f1' },
+            { name: 'Pagos deuda', data: valsD, color: '#f59e0b' }
+          ],
+          legend: { enabled: true, itemStyle: { color: '#6b7280', fontSize: '0.72rem' } },
+          credits: { enabled: false }
+        });
+      }
+    }
+
+    function renderSemanal(gastos) {
+      var groups = {};
+      for (var i = 0; i < gastos.length; i++) {
+        var s = gastos[i].semana;
+        if (!s) continue;
+        if (!groups[s]) groups[s] = 0;
+        groups[s] += gastos[i].monto;
+      }
+      var sorted = Object.keys(groups).sort();
+      var vals = sorted.map(function(s){ return parseFloat(groups[s].toFixed(2)); });
+
+      if (typeof Highcharts !== 'undefined') {
+        Highcharts.chart('chart-semanal', {
+          chart: { type: 'column', backgroundColor: 'transparent' },
+          title: { text: null },
+          xAxis: { categories: sorted, labels: { style: { color: '#6b7280', fontSize: '0.68rem' }, rotation: -45 }, lineWidth: 0 },
+          yAxis: { title: { text: null }, labels: { style: { color: '#9ca3af' }, formatter: function(){ return '$' + (this.value/1000).toFixed(0) + 'k'; } }, gridLineColor: '#f3f4f6', gridLineDashStyle: 'Dash' },
+          tooltip: { formatter: function(){ return '<b>' + this.x + '</b><br>' + formatMoneyFull(this.y); }, backgroundColor: '#1f2937', borderWidth: 0, style: { color: '#fff' }, borderRadius: 8 },
+          plotOptions: { column: { borderRadius: 5, color: '#8b5cf6', dataLabels: { enabled: vals.length <= 8, formatter: function(){ return formatMoney(this.y); }, style: { fontSize: '0.65rem', textOutline: 'none', color: '#6b7280' } } } },
+          series: [{ name: 'Gasto', data: vals, showInLegend: false }],
+          credits: { enabled: false }
+        });
+      }
+    }
+
+    function loadFromSheet() {
+      var dot = document.getElementById('status-dot');
+      var status = document.getElementById('status-text');
+      if (dot) dot.className = 'dot loading';
+      if (status) status.textContent = 'Conectando con Google Sheets...';
+
+      fetch(SHEET_URL)
+        .then(function(r){ if(!r.ok) throw new Error('HTTP '+r.status); return r.text(); })
+        .then(function(text){
+          if (text.indexOf('<!DOCTYPE')!==-1) throw new Error('No CSV');
+          var rows = parseCSV(text);
+          if (rows.length === 0) throw new Error('Sin datos');
+          allRows = [];
+          for (var i = 0; i < rows.length; i++) {
+            allRows.push({
+              monto: getNum(rows[i]),
+              tipo: getVal(rows[i], COL_TIPO),
+              lugar: getVal(rows[i], COL_LUGAR),
+              concepto: getVal(rows[i], COL_CONCEPTO),
+              ano: getVal(rows[i], COL_ANO),
+              mes: getVal(rows[i], COL_MES),
+              semana: getVal(rows[i], COL_SEMANA),
+              cuenta: getVal(rows[i], COL_CUENTA)
+            });
+          }
+          if (dot) dot.className = 'dot ok';
+          if (status) status.textContent = 'Conectado - ' + allRows.length + ' registros - ' + new Date().toLocaleString('es-MX');
+          document.getElementById('content').style.display = 'block';
+          buildFilters();
+          applyFilters();
+        })
+        .catch(function(err){
+          allRows = FALLBACK_DATA;
+          if (dot) dot.className = 'dot ok';
+          if (status) status.textContent = 'Demo (' + allRows.length + ' registros) - En GitHub Pages se conecta a tu Sheet';
+          document.getElementById('content').style.display = 'block';
+          buildFilters();
+          applyFilters();
+        });
+    }
+
+    if (typeof Highcharts !== 'undefined') {
+      Highcharts.setOptions({ chart: { style: { fontFamily: 'Inter, -apple-system, sans-serif' } } });
+    }
+    loadFromSheet();
+  </script>
+
+</body></html>
